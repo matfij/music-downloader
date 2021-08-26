@@ -1,7 +1,7 @@
 .ONESHELL:
 
 export PYTHON := py
-export PIP := py
+export PIP := pip
 export APP := src/app.py
 export VENV := .venv\Scripts\activate
 
