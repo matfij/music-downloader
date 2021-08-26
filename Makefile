@@ -1,15 +1,17 @@
-export MAIN_SCRIPT := src/main.py
-export ENVIRONMENT_SCRIPT := .venv\Scripts\activate
-
 .ONESHELL:
 
-activate:
-	${ENVIRONMENT_SCRIPT}
+export PYTHON := py
+export PIP := py
+export APP := src/app.py
+export VENV := .venv\Scripts\activate
+
+venv:
+	${VENV}
 
 run:
 	( \
-		${ENVIRONMENT_SCRIPT}; \
-		py ${MAIN_SCRIPT}; \
+		${VENV}; \
+		${PYTHON} ${APP}; \
 	)
 
 clean:
@@ -17,8 +19,8 @@ clean:
 
 quick.start:
 	( \
-		py -m venv .venv; \
-		${ENVIRONMENT_SCRIPT}; \
-		pip install -r requirements.txt; \
-		py ${MAIN_SCRIPT}; \
+		${PYTHON} -m venv .venv; \
+		${VENV}; \
+		${PIP} install -r requirements.txt; \
+		${PYTHON} ${APP}; \
 	)

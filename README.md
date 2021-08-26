@@ -1,19 +1,20 @@
-### Music Downloader
+## Music Downloader
 Simple and configurable CLI app for downloading YouTube videos.
 
-## Requirements
+### Requirements
  - Python 3.6.x-3.9.x
  - make
 
-## Quick start:
+### Quick start:
  - cmd: `make quick.start`
+ - cmd: `make run`
 
-## Setup (Windows)
+### Setup (Windows)
  - cmd: `py -m venv .venv`
  - cmd: `.venv\Scripts\activate`
  - cmd: `pip install -r requirements.txt`
  - adjust config.json file to your needs
- - cmd: `make run`
+ - cmd: `py src/app.py`
 
-## Confiuration
- - `baseUrl` - url to the source website
+### Confiuration
+ - `baseUrl` - url to the source channel videos
