@@ -1,9 +1,10 @@
 {
     "baseUrl": "https://www.youtube.com/c/TerminalPassage/videos",
     "quality": 0,
-    "downloadDepth": 12000,
-    "downloadDepthInterval": 1000,
+    "downloadDepth": 3000,
+    "downloadDepthStep": 1000,
+    "downloadDepthStepWaitTime": 1,
     "downloadLimit": 20,
-    "downloadDelay": 0,
+    "downloadDelay": 1,
     "maxWaitTime": 30
 }
