@@ -4,7 +4,8 @@
     "downloadDepth": 3000,
     "downloadDepthStep": 1000,
     "downloadDepthStepWaitTime": 1,
-    "downloadLimit": 20,
     "downloadDelay": 1,
-    "maxWaitTime": 30
+    "maxWaitTime": 30,
+    "skip": 10,
+    "take": 50
 }

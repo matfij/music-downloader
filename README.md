@@ -22,6 +22,7 @@ Simple and configurable CLI app for downloading YouTube videos.
  - `downloadDepth` - number of pixels to be scrolled in total in order to load more videos
  - `downloadDepthStep` - number of pixels to be scrolled at once in order to load more videos
  - `downloadDepthStepWaitTime` - number of seconds required for more videos to load
- - `downloadLimit` - maximum number of downloaded videos
  - `downloadDelay` - optional interval between each download
  - `maxWaitTime` - maximum number of seconds required for a website to load
+ - `skip` - number of skipped videos
+ - `take` - target number of downloaded videos

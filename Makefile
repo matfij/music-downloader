@@ -1,26 +1,19 @@
 .ONESHELL:
 
-export PYTHON := py
-export PIP := pip
-export APP := src/app.py
-export VENV := .venv\Scripts\activate
-
-venv:
-	${VENV}
+PYTHON := py
+PIP := pip
+APP := src/app.py
+VENV := .venv\Scripts\activate
 
 run:
-	( \
-		${VENV}; \
-		${PYTHON} ${APP}; \
-	)
+	${VENV}
+	${PYTHON} ${APP}
 
 clean:
 	rm -r -f .venv
 
 quick.start:
-	( \
-		${PYTHON} -m venv .venv; \
-		${VENV}; \
-		${PIP} install -r requirements.txt; \
-		${PYTHON} ${APP}; \
-	)
+	${PYTHON} -m venv .venv
+	${VENV}
+	${PIP} install -r requirements.txt
+	${PYTHON} ${APP}

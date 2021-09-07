@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions
 from bs4 import BeautifulSoup
 
 import constants as C
-from config import Quality
+from constants import Quality
 
 
 # load user configuration
@@ -20,9 +20,10 @@ QUALITY = config['quality']
 DOWNLOAD_DEPTH = config['downloadDepth']
 DOWNLOAD_DEPTH_STEP = config['downloadDepthStep']
 DOWNLOAD_DEPTH_STEP_WAIT_TIME = config['downloadDepthStepWaitTime']
-DOWNLOAD_LIMIT = config['downloadLimit']
 DOWNLOAD_DELAY = config['downloadDelay']
 MAX_WAIT_TIME = config['maxWaitTime']
+SKIP = config['skip']
+TAKE = config['take']
 
 driver = webdriver.Chrome()
 
@@ -53,7 +54,7 @@ for tag in video_tags:
 # download videos
 download_btn_selector = C.DOWNLOAD_BTN_HQ_SELECTOR if QUALITY == Quality.HIGH else C.DOWNLOAD_BTN_LQ_SELECTOR
 
-for link in video_links:
+for link in video_links[SKIP:TAKE]:
     driver.get(C.DOWNLOAD_API_URL + link)
 
     download_btn = WebDriverWait(driver, MAX_WAIT_TIME).until(

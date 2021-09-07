@@ -1,3 +1,9 @@
+from enum import Enum
+
+class Quality(Enum):
+    LOW = 0
+    HIGH = 1
+
 YT_VIDEO_ID_ATTRIBUTE = 'thumbnail'
 YT_VIDEO_ID_PREFIX = '/watch?v='
 YT_BTN_CONTINUE_SELECTOR = '#yDmH0d > c-wiz > div > div > div > div.NIoIEf > div.G4njw > div.qqtRac > form > div.lssxud > div > button'
